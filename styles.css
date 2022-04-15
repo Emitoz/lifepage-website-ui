@@ -133,6 +133,13 @@ p {
   text-decoration: none;
 }
 
+.navigation .dropdown {
+  background: #FFFFFF;
+  padding: 30px;
+}
+
+
+
 /* Hero */
 .hero-flex {
   display: flex;
@@ -254,4 +261,40 @@ section.subscribe form input {
   padding: 15px;
   border-radius: 20px;
   outline: none;
+}
+
+
+/* Footer */
+footer {
+  padding: 100px 0;
+}
+
+.footer-flex {
+  justify-content: space-between;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu ul li {
+  margin-bottom: 10px;
+}
+
+.footer-menu ul li a {
+  color: var(--medium-gray);
+  text-decoration: none;
+}
+.footer-menu ul li a:hover {
+  color: var(--orange-dark);
+}
+
+footer hr {
+  border: none;
+  border-top: 1px solid #DFDFDF;
+}
+
+.footer-copyright {
+  color: var(--medium-gray);
 }
