@@ -15,6 +15,11 @@
 
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./spacing.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
@@ -33,10 +38,10 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li>
+            <li id="products-link">
               <a href="about.html">Products &#8628;</a>
-              <div class="dropdown">
-                <h5>Products</h5>
+              <div class="dropdown" id="products-dropdown">
+                <h5 class="m-t-0">Our Products</h5>
                 <ul>
                   <li><a href="products.html">Land</a></li>
                   <li><a href="products.html">Home</a></li>
@@ -44,7 +49,17 @@
                 </ul>
               </div>
             </li>
-            <li><a href="about.html">Media &#8628;</a></li>
+            <li id="media-link">
+              <a href="about.html">Media &#8628;</a>
+              <div class="dropdown" id="media-dropdown">
+                <h5 class="m-t-0">Our Media</h5>
+                <ul>
+                  <li><a href="media.html">Press</a></li>
+                  <li><a href="media.html">Blog</a></li>
+                  <li><a href="media.html">Videos</a></li>
+                </ul>
+              </div>
+            </li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="" class="button button-sm button-primary">Partner with us</a></li>
           </ul>
@@ -230,8 +245,73 @@
       </div>
   </footer>
 
+  <div class="contact-modal-wrapper">
+    <div class="contact-modal">
+      <img id="close-modal" title="Close" src="./img/close.svg" alt="close modal icon">
+      <h2>Get in touch</h2>
+      <div class="contact-modal-content">
+        <div class="contact-flex flex">
+          <div class="contact-details">
+            <div class="contact-item">
+              <img src="./img/map-rounded.svg" alt="">
+              <span>21, Alake Onile-Ere Crescent,
+                Gbagada Phase 2, Lagos.</span>
+            </div>
+            <div class="contact-item">
+              <img src="./img/at-rounded.svg" alt="">
+              <span><a href="mailto: findus@lifepagegroup.com">findus@lifepagegroup.com</a></span>
+            </div>
+            <div class="contact-item">
+              <img src="./img/phone-rounded.svg" alt="">
+              <span>
+                <a href="tel: 090 6000 5747">090 6000 5747</a>, <a href="tel: 090 6000 5737">090 6000 5737</a>
+              </span>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h5 class="m-t-0">Got an Enquiry?</h5>
+            <form action="">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="name">Your name</label>
+                  <input type="text" id="name" placeholder="John Doe">
+                </div>
+                <div class="form-group">
+                  <label for="email">Your email</label>
+                  <input type="email" id="email" placeholder="john@email.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Your message</label>
+                <textarea id="message" placeholder="Your message"></textarea>
+              </div>
+              <button type="submit" class="button button-primary">Leave a message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <script>
     AOS.init();
+
+    // Dropdown hover effect
+    $('#products-link').hover(function () {
+      $('#products-dropdown').show();
+    });
+    $('#products-link').mouseleave(function () {
+      $('#products-dropdown').hide();
+    });
+
+    $("#media-link").hover(function () {
+      $("#media-dropdown").show();
+    });
+    $("#media-link").mouseleave(function () {
+      $("#media-dropdown").hide();
+    });
   </script>
 </body>
 
