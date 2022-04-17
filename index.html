@@ -60,7 +60,7 @@
                 </ul>
               </div>
             </li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a style="cursor: pointer;" id="open-modal">Contact</a></li>
             <li><a href="" class="button button-sm button-primary">Partner with us</a></li>
           </ul>
         </div>
@@ -312,6 +312,17 @@
     $("#media-link").mouseleave(function () {
       $("#media-dropdown").hide();
     });
+
+    // Modal
+    $("#open-modal").click(function () {
+      $(".contact-modal-wrapper").show();
+    });
+
+    // Close modal
+    $("#close-modal").click(function () {
+      $(".contact-modal-wrapper").hide();
+    });
+
   </script>
 </body>
 
